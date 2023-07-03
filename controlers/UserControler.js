@@ -1,4 +1,5 @@
 const User=require("../models/UserModel");
+const { instance } = require("./Connect_rzp");
 
 module.exports.addToLikeMovies = async(req,res) => {
     try{
@@ -98,3 +99,25 @@ module.exports.deleteMovies=async(req,res)=>{
     }
 }
 
+
+module.exports.Xcription=(req,res)=>{
+    const amount=[199,499,649];
+    const {email,id}=req.params;
+//////////////////////////////
+      
+var options = {
+    amount: amount[id],  // amount in the smallest currency unit
+    currency: "INR",
+    receipt: "order_rcptid_11"
+  };
+  instance.orders.create(options, function(err, order) {
+      if(err){
+        return res.status(500).json({err});
+      }
+        return res.status(200).json({order});
+  });
+
+
+    
+   
+}
