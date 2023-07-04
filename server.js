@@ -17,7 +17,7 @@ mongoose.connect(`${process.env.MONGO_URL}`,{
 
 // mongoose
 //   .connect(  
-//     "mongodb+srv://riderAtlas:riderAtlas@netflixdata.ssd6ifw.mongodb.net/?retryWrites=true&w=majority",
+//     "",
 //     {
 //       useNewUrlParser: true,
 //       useUnifiedTopology: true,
